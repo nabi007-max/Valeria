@@ -1,12 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Empresa Ejemplo — Productos sostenibles y servicio de calidad</title>
+  <meta name="description" content="Empresa Ejemplo ofrece productos sostenibles con atención personalizada. Calidad certificada y envíos a todo el país.">
+  <meta name="keywords" content="productos sostenibles, comercio local, entrega nacional">
+  <meta name="author" content="Empresa Ejemplo">
+  <link rel="canonical" href="https://www.ejemplo.com/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (social) -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Empresa Ejemplo — Productos sostenibles">
+  <meta property="og:description" content="Productos sostenibles con atención personalizada y envío rápido.">
+  <meta property="og:url" content="https://www.ejemplo.com/">
+  <meta property="og:site_name" content="Empresa Ejemplo">
+  <meta property="og:image" content="/assets/og-image.jpg">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Empresa Ejemplo — Productos sostenibles">
+  <meta name="twitter:description" content="Productos sostenibles con atención personalizada y envío rápido.">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
+
+  <!-- JSON-LD structured data (Organization + WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Empresa Ejemplo",
+    "url": "https://www.ejemplo.com",
+    "logo": "https://www.ejemplo.com/assets/logo.png",
+    "sameAs": ["https://www.facebook.com/empresa-ejemplo","https://www.twitter.com/empresa-ejemplo"]
+  }
+  </script>
+
+  <!-- Basic styles: clean, responsive, accessible -->
+  <style>
+    /* Reset-ish (minimal) */
+    :root{
+      --brand:#0b6efd;
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --max-width:1100px;
+      --radius:12px;
+      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-size:16px;
+      line-height:1.5;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+    header{background:linear-gradient(180deg, #f8fafc, #fff);border-bottom:1px solid #e6eef8}
+    .site-brand{display:flex;align-items:center;gap:.75rem;padding:.75rem 0}
+    .logo{width:48px;height:48px;border-radius:8px;background:#eee;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+    a{color:inherit;text-decoration:none}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center;padding:2rem 0}
+    .hero h1{font-size:clamp(1.5rem,3vw,2.25rem);margin:.25rem 0}
+    .hero p{color:var(--muted);margin:0}
+
+    /* Cards */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .card{background:#fff;border:1px solid #eef2f8;padding:1rem;border-radius:10px;box-shadow:0 1px 2px rgba(12,18,26,0.04)}
+
+    /* Footer */
+    footer{border-top:1px solid #eef2f8;padding:1rem 0;margin-top:2rem;color:var(--muted)}
+
+    /* Accessibility helpers */
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap!important}
+
+    /* Focus styles */
+    :focus{outline:3px solid Highlight;outline-offset:3px}
+    a:focus{outline-offset:3px}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:.5rem .75rem;border-radius:8px;background:var(--brand);color:#fff;font-weight:600}
+
+    /* Responsive tweaks */
+    @media (min-width:700px){
+      .hero{grid-template-columns:1fr 420px}
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+    /* High contrast fallback for user agents that prefer high contrast */
+    @media (forced-colors: active){
+      :root{--brand:WindowText}
+    }
+  </style>
 </head>
 <body>
-    <h1>Iban mamani Quispe</h1>
-    <h2>Curso de Tecnolias de Internet</h2>
+  <a class="visually-hidden" href="#main">Saltar al contenido principal</a>
+
+  <header role="banner">
+    <div class="container site-brand">
+      <div class="logo" aria-hidden="true">EE</div>
+      <div>
+        <a href="/" aria-label="Inicio - Empresa Ejemplo"><strong>Empresa Ejemplo</strong></a>
+        <div class="muted" style="font-size:.9rem;color:var(--muted)">Productos sostenibles · Envíos a todo el país</div>
+      </div>
+      <nav aria-label="Principal" style="margin-left:auto">
+        <ul>
+          <li><a href="/" rel="home">Inicio</a></li>
+          <li><a href="/productos">Productos</a></li>
+          <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Productos sostenibles que cuidan tu mundo</h1>
+        <p>Calidad certificada, materiales responsables y atención cercana. Descubre nuestra selección y compra con confianza.</p>
+
+        <p style="margin-top:1rem">
+          <a class="btn" href="/productos">Ver productos</a>
+        </p>
+      </div>
+
+      <aside aria-label="Promoción" class="card" role="complementary">
+        <h2 style="font-size:1.1rem;margin-top:0">Envío gratuito</h2>
+        <p class="muted" style="color:var(--muted)">En compras mayores a $50 — entrega express 48-72h en ciudades principales.</p>
+      </aside>
+    </section>
+
+    <section aria-labelledby="productos" class="container">
+      <h2 id="productos">Productos destacados</h2>
+      <div class="grid" role="list">
+        <article class="card" role="listitem" aria-labelledby="p1-title">
+          <img src="/assets/producto1.jpg" alt="Bolsa reutilizable de algodón orgánico" style="width:100%;height:auto;border-radius:8px;margin-bottom:.5rem">
+          <h3 id="p1-title">Bolsa reutilizable</h3>
+          <p class="muted">Canvas 100% orgánico — ideal para compras diarias.</p>
+          <p><a href="/productos/bolsa-reutilizable" class="btn">Comprar</a></p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="p2-title">
+          <img src="/assets/producto2.jpg" alt="Set de vasos biodegradables" style="width:100%;height:auto;border-radius:8px;margin-bottom:.5rem">
+          <h3 id="p2-title">Vasos biodegradables</h3>
+          <p class="muted">Set de 4 vasos hechos con material compostable.</p>
+          <p><a href="/productos/vasos-biodegradables" class="btn">Comprar</a></p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="p3-title">
+          <img src="/assets/producto3.jpg" alt="Cubo de reciclaje con compartimentos" style="width:100%;height:auto;border-radius:8px;margin-bottom:.5rem">
+          <h3 id="p3-title">Cubo de reciclaje</h3>
+          <p class="muted">Organiza tu reciclaje en 3 compartimentos prácticos.</p>
+          <p><a href="/productos/cubo-reciclaje" class="btn">Comprar</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="sobre-nosotros" class="container">
+      <h2 id="sobre-nosotros">Sobre nosotros</h2>
+      <p>Empresa Ejemplo nace con la misión de ofrecer alternativas conscientes y accesibles. Contamos con certificaciones nacionales e internacionales.</p>
+
+      <h3>Accesibilidad y atención</h3>
+      <p>Atendemos por teléfono, correo y chat. Si necesitas asistencia especial para realizar tu compra, contáctanos y te ayudamos.</p>
+    </section>
+
+    <section aria-labelledby="contacto" class="container">
+      <h2 id="contacto">Contacto</h2>
+      <form action="/contact-form" method="post" aria-label="Formulario de contacto">
+        <div style="display:grid;gap:.5rem;max-width:480px">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" required aria-required="true">
+
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" required aria-required="true">
+
+          <label for="msg">Mensaje</label>
+          <textarea id="msg" name="message" rows="4"></textarea>
+
+          <button class="btn" type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <nav aria-label="Enlaces del pie">
+        <ul style="display:flex;gap:1rem;flex-wrap:wrap;margin:0;padding:0;list-style:none">
+          <li><a href="/aviso-legal">Aviso legal</a></li>
+          <li><a href="/politica-privacidad">Política de privacidad</a></li>
+          <li><a href="/accesibilidad">Accesibilidad</a></li>
+        </ul>
+      </nav>
+
+      <p style="margin-top:1rem;color:var(--muted)">© Empresa Ejemplo — <time datetime="2025-10-03">2025</time></p>
+    </div>
+  </footer>
+
+  <!-- Minimal inline script only for progressive enhancement (kept to a minimum for static-only requirement)
+       If you strictly want NO JavaScript at all, remove this block. -->
+  <noscript>
+    <div role="status" aria-live="polite" style="position:fixed;bottom:1rem;right:1rem;background:#fff;padding:.5rem;border:1px solid #eee">JavaScript deshabilitado — todo el sitio funciona sin JS, pero algunas mejoras pueden no estar disponibles.</div>
+  </noscript>
 </body>
 </html>
